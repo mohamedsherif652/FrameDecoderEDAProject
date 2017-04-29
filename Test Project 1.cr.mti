@@ -1,0 +1,129 @@
+{Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity testbench
+-- Compiling architecture test_addaccu_beh of testbench
+-- Loading entity addaccu
+
+} {} {}} {Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity addaccu
+-- Compiling architecture data_flow of addaccu
+
+} {} {}} Y:/ModelSim/adder_acc.vhd {0 {vcom -work work -2002 -explicit -stats=none Y:/ModelSim/adder_acc.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity mux4
+-- Compiling architecture mux4_struct of mux4
+-- Compiling entity fulladder1
+-- Compiling architecture fulladder1_sturct of fulladder1
+-- Compiling entity fulladder4
+-- Compiling architecture fulladder4_struct of fulladder4
+-- Compiling entity accu
+-- Compiling architecture accu_struct of accu
+-- Compiling entity adder_acc
+-- Compiling architecture adder_acc_struct of adder_acc
+-- Compiling entity mux2in
+** Error: Y:/ModelSim/adder_acc.vhd(170): (vcom-1136) Unknown identifier "std_vector".
+
+** Error: Y:/ModelSim/adder_acc.vhd(171): (vcom-1136) Unknown identifier "std_vector".
+
+** Error: Y:/ModelSim/adder_acc.vhd(174): VHDL Compiler exiting
+
+} {15.0 16.0 17.0 18.0 19.0 20.0} {}} Y:/ModelSim/alu_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none Y:/ModelSim/alu_tb.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity alu_testbench
+-- Compiling architecture alu_tb of alu_testbench
+-- Loading entity fulladder4
+** Warning: Y:/ModelSim/alu_tb.vhd(22): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} Y:/ModelSim/testbench_alu.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/ModelSim/testbench_alu.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity testbench_alu
+-- Compiling architecture tb_alu of testbench_alu
+-- Loading entity fulladder4
+
+} {} {}} {Y:/ModelSim/Lectures Files/addaccu_struct/accu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_struct/accu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity accu
+-- Compiling architecture behaviour_data_flow of accu
+-- Compiling architecture structural_view of accu
+-- Loading entity accu
+
+} {} {}} {Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity testbench_beh_struct
+-- Compiling architecture test_addaccu_beh_struct of testbench_beh_struct
+-- Loading entity addaccu
+
+} {} {}} Y:/ModelSim/work/testbench_fsm.vhd {1 {vcom -work work -2002 -explicit -stats=none Y:/ModelSim/work/testbench_fsm.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity testbench
+-- Compiling architecture arch of testbench
+-- Loading entity frame_decoder
+
+} {} {}} {Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd} {0 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity addaccu
+-- Compiling architecture struct of addaccu
+-- Loading entity accu
+** Error: Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(79): (vcom-1131) Port "i" is declared on component "accu" but not on entity "accu".
+
+** Error: Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(79): (vcom-1131) Port "ck" is declared on component "accu" but not on entity "accu".
+
+** Error: Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(79): (vcom-1131) Port "o" is declared on component "accu" but not on entity "accu".
+
+** Error (suppressible): Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(79): (vcom-1130) Port "clk" of entity "accu" is not in the component being instantiated.
+
+** Error (suppressible): Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(79): (vcom-1130) Port "d" of entity "accu" is not in the component being instantiated.
+
+-- Loading entity alu
+-- Loading entity mux
+** Error: Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd(101): VHDL Compiler exiting
+
+} {11.0 12.0 13.0 14.0 15.0 16.0 23.0 24.0} {}} {Y:/ModelSim/Lectures Files/addaccu_struct/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_struct/alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity alu
+-- Compiling architecture behaviour_data_flow of alu
+-- Compiling architecture structural_view of alu
+-- Loading entity alu
+
+} {} {}} {Y:/ModelSim/Lectures Files/addaccu_struct/mux.vhd} {1 {vcom -work work -2002 -explicit -stats=none {Y:/ModelSim/Lectures Files/addaccu_struct/mux.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity mux
+-- Compiling architecture behaviour_data_flow of mux
+-- Compiling architecture structural_view of mux
+-- Loading entity mux
+
+} {} {}}

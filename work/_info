@@ -1,0 +1,618 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dY:/ModelSim
+Eaccu
+Z1 w1476359344
+R0
+Z2 8Y:/ModelSim/Lectures Files/addaccu_struct/accu.vhd
+Z3 FY:/ModelSim/Lectures Files/addaccu_struct/accu.vhd
+l0
+L5
+VW9o?jJU1G9b?bjiD3dF_>3
+!s100 ZzDkB=@nMgWTZUBc84UED3
+Z4 OP;C;10.4a;61
+32
+Z5 !s110 1492797682
+!i10b 1
+Z6 !s108 1492797682.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_struct/accu.vhd|
+Z8 !s107 Y:/ModelSim/Lectures Files/addaccu_struct/accu.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit -O0
+Z10 tExplicit 1
+Astructural_view
+Z11 DEx4 work 4 accu 0 22 W9o?jJU1G9b?bjiD3dF_>3
+l48
+L34
+V5DSUS2OWJgVQ=k5dGN_KJ2
+!s100 H7QfTG>ZzoezdNna>b[A30
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Abehaviour_data_flow
+R11
+l19
+L17
+VlkZcPhCNDCPXZ8GGC18Qb2
+!s100 [lQ=jg0X0Yfmb9dc9mGQI2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Aaccu_struct
+DEx4 work 4 accu 0 22 [2994mj9M@_3=@UGZT6lW0
+l118
+L107
+VL2YUZGc1XADVX[:9bX12z2
+!s100 F]FbV]YA2jBabS8FimVc73
+R4
+32
+R5
+!i10b 1
+R6
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/adder_acc.vhd|
+Z13 !s107 Y:/ModelSim/adder_acc.vhd|
+!i113 1
+R9
+R10
+Z14 FY:/ModelSim/adder_acc.vhd
+Z15 w1491798378
+Z16 8Y:/ModelSim/adder_acc.vhd
+Eaddaccu
+Z17 w1476367370
+Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z19 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z20 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z21 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z22 8Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd
+Z23 FY:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd
+l0
+L8
+Vi8fdQRZ6mnHRY;LRV4F201
+!s100 OD?P^1MEbiM=_HaWd3FFS3
+R4
+32
+R5
+!i10b 1
+R6
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd|
+Z25 !s107 Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_struct.vhd|
+!i113 1
+R9
+R10
+Adata_flow
+R18
+R19
+R20
+R21
+Z26 DEx4 work 7 addaccu 0 22 i8fdQRZ6mnHRY;LRV4F201
+l26
+L21
+VoD=hl2KjiFP3RHfU:WBIO1
+!s100 i88m]WgPE_Tf>3ZRd6akY1
+R4
+32
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd|
+!s107 Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd|
+!i113 1
+R9
+R10
+FY:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd
+w1458733334
+8Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh.vhd
+Astruct
+Z27 DEx4 work 3 mux 0 22 Ybm1eZQ9@ShAVo@zK=U`c0
+Z28 DEx4 work 3 alu 0 22 0G]PXPWUHj5b?5=ZE9`B[2
+R11
+R18
+R19
+R20
+R21
+R26
+l83
+L20
+V8fWNOHQoSOV0Mh[6L5CfA3
+!s100 In;C=Dlacg_?R`zW>;YIQ0
+R4
+32
+!s110 1490906866
+!i10b 1
+!s108 1490906866.000000
+R24
+R25
+!i113 1
+R9
+R10
+Eadder_acc
+R15
+R0
+R16
+R14
+l0
+L126
+VIcT`naiJD63_R3FT^6KV42
+!s100 ]AP<YQlj@c>=zL]L;E5Fj1
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Aadder_acc_struct
+DEx4 work 9 adder_acc 0 22 IcT`naiJD63_R3FT^6KV42
+l161
+L134
+V6cg_KDi^4APZJUmZ[JWc41
+!s100 na<Cj?BJ<aY]Q`VC7=AHG0
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Ealu
+Z29 w1476359326
+R0
+Z30 8Y:/ModelSim/Lectures Files/addaccu_struct/alu.vhd
+Z31 FY:/ModelSim/Lectures Files/addaccu_struct/alu.vhd
+l0
+L5
+V0G]PXPWUHj5b?5=ZE9`B[2
+!s100 U@SHzJhRi5gZ]mc3]7Dab0
+R4
+32
+R5
+!i10b 1
+R6
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_struct/alu.vhd|
+Z33 !s107 Y:/ModelSim/Lectures Files/addaccu_struct/alu.vhd|
+!i113 1
+R9
+R10
+Astructural_view
+R28
+l82
+L41
+V>WfU?dgE;Yl?;5f^]J6aV1
+!s100 O3`zYHZA1fHbh=akRCTiP1
+R4
+32
+R5
+!i10b 1
+R6
+R32
+R33
+!i113 1
+R9
+R10
+Abehaviour_data_flow
+R28
+l23
+L17
+V8=niLgioj>=V]cPWVdX:O0
+!s100 ]mW@jgOVBUoNVYK2ZlS`^1
+R4
+32
+R5
+!i10b 1
+R6
+R32
+R33
+!i113 1
+R9
+R10
+Ealu_testbench
+Z34 w1490892807
+R0
+Z35 8Y:/ModelSim/alu_tb.vhd
+Z36 FY:/ModelSim/alu_tb.vhd
+l0
+L1
+Vdc^TkcT8e2Wc@KBbe8>]d1
+!s100 _eE:`:j87aOMO@7I^7:AF0
+R4
+32
+R5
+!i10b 1
+R6
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/alu_tb.vhd|
+Z38 !s107 Y:/ModelSim/alu_tb.vhd|
+!i113 1
+R9
+R10
+Aalu_tb
+Z39 DEx4 work 10 fulladder4 0 22 c@=z69z19gM8o2]iaZRBQ3
+DEx4 work 13 alu_testbench 0 22 dc^TkcT8e2Wc@KBbe8>]d1
+l24
+L5
+VXKORUOUO0BFJ^zN1CH>Jm1
+!s100 TBoJ^KX383z8;JLE]Y>080
+R4
+32
+R5
+!i10b 1
+R6
+R37
+R38
+!i113 1
+R9
+R10
+Eframe_decoder
+Z40 w1493044718
+R20
+R21
+R0
+Z41 8Y:/ModelSim/work/project_fsm.vhd
+Z42 FY:/ModelSim/work/project_fsm.vhd
+l0
+L4
+VASEfnMXMDVmT0kBId=A3I0
+!s100 U5:h:M=Fmo[5WJ1CC=75k3
+R4
+32
+Z43 !s110 1493044731
+!i10b 1
+Z44 !s108 1493044731.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/work/project_fsm.vhd|
+Z46 !s107 Y:/ModelSim/work/project_fsm.vhd|
+!i113 1
+R9
+R10
+Afd_fsm_mealy
+R20
+R21
+Z47 DEx4 work 13 frame_decoder 0 22 ASEfnMXMDVmT0kBId=A3I0
+l21
+L13
+VZbkG6W;4ze3=WjP8ff<[g0
+!s100 @PZCOXM04[L@1lhHRE8[m3
+R4
+32
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R9
+R10
+Efulladder1
+R15
+R0
+R16
+R14
+l0
+L22
+Vz19L5DG9H;4n5iEjfO7IO1
+!s100 8RB7Ac3kAz<=da?=Z;Zgb1
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Afulladder1_sturct
+DEx4 work 10 fulladder1 0 22 z19L5DG9H;4n5iEjfO7IO1
+l59
+L29
+Veo73mSNYadd256a8<K?MP0
+!s100 MhgfnoNZHeMTa_OTPWgM`3
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Efulladder4
+R15
+R0
+R16
+R14
+l0
+L73
+Vc@=z69z19gM8o2]iaZRBQ3
+!s100 kzon`T<HR?ACeUEYK293L0
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Afulladder4_struct
+R39
+l91
+L82
+VcgebE`bRlHf4U9<T4md7e2
+!s100 fGFz37lg<8Ch[OB@DS5T;0
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Emux
+Z48 w1476359052
+R0
+Z49 8Y:/ModelSim/Lectures Files/addaccu_struct/mux.vhd
+Z50 FY:/ModelSim/Lectures Files/addaccu_struct/mux.vhd
+l0
+L5
+VYbm1eZQ9@ShAVo@zK=U`c0
+!s100 RP8YV:9bhnESSoR:16LRS1
+R4
+32
+Z51 !s110 1492797683
+!i10b 1
+Z52 !s108 1492797683.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_struct/mux.vhd|
+Z54 !s107 Y:/ModelSim/Lectures Files/addaccu_struct/mux.vhd|
+!i113 1
+R9
+R10
+Astructural_view
+R27
+l44
+L30
+VzC_FU_Fm9dAeIg>b1]j@W1
+!s100 `n9i9Mb>DjD:K28XGkH?:3
+R4
+32
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R9
+R10
+Abehaviour_data_flow
+R27
+l20
+L18
+VQk@UUT9KX`92EWG=3E=dd1
+!s100 RRU8SKo^_ZTZV7hnB9S;[0
+R4
+32
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R9
+R10
+Emux4
+R15
+R0
+R16
+R14
+l0
+L3
+VgWW=;9b?m:FzAj_Z?@hNk0
+!s100 kDiXRkL[[I]K@fAAH7=4h0
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Amux4_struct
+DEx4 work 4 mux4 0 22 gWW=;9b?m:FzAj_Z?@hNk0
+l14
+L11
+VPJnETgKGPbCaj6P:4To751
+!s100 FnB[aCaaG4@@Ki61Z<WEj0
+R4
+32
+R5
+!i10b 1
+R6
+R12
+R13
+!i113 1
+R9
+R10
+Etestbench
+Z55 w1493044337
+R20
+R21
+R0
+Z56 8Y:/ModelSim/work/testbench_fsm.vhd
+Z57 FY:/ModelSim/work/testbench_fsm.vhd
+l0
+L4
+VzDgANadMoQeCobW2zhXle1
+!s100 0N4F`=k[2dl6caGHeL2842
+R4
+32
+R43
+!i10b 1
+R44
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/work/testbench_fsm.vhd|
+Z59 !s107 Y:/ModelSim/work/testbench_fsm.vhd|
+!i113 1
+R9
+R10
+Aarch
+R47
+R20
+R21
+Z60 DEx4 work 9 testbench 0 22 zDgANadMoQeCobW2zhXle1
+l32
+L8
+Z61 VDdk6N8jX75fjVXzD5ln0T1
+Z62 !s100 YUDPfeh_jef>JifdkY0_l3
+R4
+32
+R43
+!i10b 1
+R44
+R58
+R59
+!i113 1
+R9
+R10
+Atest_addaccu_beh
+R26
+R18
+R19
+R20
+R21
+DEx4 work 9 testbench 0 22 <:OUA102Q0GgGJ:6_`Z0P2
+l42
+L10
+VIbJLCU^EZEh<[F24>Mdc93
+!s100 Hjei3`9Ob@N5RO3P58E[a2
+R4
+32
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd|
+!s107 Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd|
+!i113 1
+R9
+R10
+FY:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd
+w1476004336
+8Y:/ModelSim/Lectures Files/addaccu_beh/addaccu_beh_test.vhd
+Etestbench_alu
+Z63 w1490903827
+R18
+R19
+R20
+R21
+R0
+Z64 8Y:/ModelSim/testbench_alu.vhd
+Z65 FY:/ModelSim/testbench_alu.vhd
+l0
+L6
+VQ;OD9EVGmHL7YemhadCD_2
+!s100 M=P[81cdHcmojI5ijLB@:3
+R4
+32
+R51
+!i10b 1
+R52
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/testbench_alu.vhd|
+Z67 !s107 Y:/ModelSim/testbench_alu.vhd|
+!i113 1
+R9
+R10
+Atb_alu
+R39
+R18
+R19
+R20
+R21
+DEx4 work 13 testbench_alu 0 22 Q;OD9EVGmHL7YemhadCD_2
+l37
+L10
+VR2jSCFZcVCRd7ERl8=CNL1
+!s100 JcLQ@F3gJXC=NN6AOS@8d2
+R4
+32
+R51
+!i10b 1
+R52
+R66
+R67
+!i113 1
+R9
+R10
+Etestbench_beh_struct
+Z68 w1476004588
+R18
+R19
+R20
+R21
+R0
+Z69 8Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd
+Z70 FY:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd
+l0
+L7
+VNj^ke8e@9aUA86lD_lQ?a3
+!s100 13K5R4N2F^zANXnW6MUHP0
+R4
+32
+R5
+!i10b 1
+R6
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd|
+Z72 !s107 Y:/ModelSim/Lectures Files/addaccu_struct/addaccu_beh_struct_test.vhd|
+!i113 1
+R9
+R10
+Atest_addaccu_beh_struct
+R26
+R18
+R19
+R20
+R21
+DEx4 work 20 testbench_beh_struct 0 22 Nj^ke8e@9aUA86lD_lQ?a3
+l43
+L10
+VI9@ZdeDZ3ea1LPW_N=o5S2
+!s100 >L2S0OMUedHT^DL@4TGLo3
+R4
+32
+R5
+!i10b 1
+R6
+R71
+R72
+!i113 1
+R9
+R10
