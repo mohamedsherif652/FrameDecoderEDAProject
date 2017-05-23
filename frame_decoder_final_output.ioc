@@ -1,0 +1,33 @@
+LEFT(
+(IOPIN wordin(2).0 );
+(IOPIN wordin(3).0 );
+(IOPIN wordin(4).0 );
+(IOPIN wordin(5).0 );
+(IOPIN wordin(6).0 );
+(IOPIN wordin(7).0 );
+(IOPIN scantest.0 );
+(IOPIN scanin.0 );)
+TOP(
+(IOPIN data(0).0 );
+(IOPIN data(1).0 );
+(IOPIN data(2).0 );
+(IOPIN data(3).0 );
+(IOPIN data(4).0 );
+(IOPIN data(5).0 );
+(IOPIN data(6).0 );)
+RIGHT(
+(IOPIN address(5).0 );
+(IOPIN address(4).0 );
+(IOPIN address(3).0 );
+(IOPIN address(2).0 );
+(IOPIN address(1).0 );
+(IOPIN address(0).0 );
+(IOPIN data(7).0 );)
+BOTTOM(
+(IOPIN wordin(1).0 );
+(IOPIN wordin(0).0 );
+(IOPIN reset.0 );
+(IOPIN clk.0 );
+(IOPIN scanout.0 );
+(IOPIN address(7).0 );
+(IOPIN address(6).0 );)

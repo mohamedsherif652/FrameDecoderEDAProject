@@ -1,0 +1,31 @@
+#M{4}
+
+## Set the Optimization Level (1..5)
+
+## 1 : poor optimization - small computation time
+
+## 5 : best optimization - long computation time
+
+#L{1}
+
+## External Output Capacitance (in fF)
+
+#C{
+data(0):100;
+data(1):100;
+data(2):100;
+data(3):100;
+data(4):100;
+data(5):100;
+data(6):100;
+data(7):100;
+address(0):100;
+address(1):100;
+address(2):100;
+address(3):100;
+address(4):100;
+address(5):100;
+address(6):100;
+address(7):100;
+err:100;
+}

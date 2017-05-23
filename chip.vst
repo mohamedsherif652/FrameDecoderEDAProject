@@ -1,0 +1,447 @@
+entity chip is
+   port (
+      clk      : in      bit;
+      reset    : in      bit;
+      err      : out     bit;
+      word_in  : in      bit_vector(7 downto 0);
+      address  : out     bit_vector(7 downto 0);
+      data     : out     bit_vector(7 downto 0);
+      scanin   : in      bit;
+      scantest : in      bit;
+      scanout  : out     bit
+ );
+end chip;
+
+architecture structural of chip is
+component po_sp
+  PORT (
+  i : in BIT;	-- i
+  pad : out BIT;	-- pad
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+END component;
+
+component pi_sp
+  PORT (
+  pad : in BIT;	-- pad
+  t : out BIT;	-- t
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+component pvsse_sp
+  PORT (
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+component pvssick_sp
+  PORT (
+  cko : out WOR_BIT BUS;	-- cko
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+component pvdde_sp
+  PORT (
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+component pvddi_sp
+  PORT (
+  ck : in BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+component pck_sp
+  PORT (
+  pad : in BIT;	-- pad
+  ck : out BIT;	-- ck
+  vdde : in BIT;	-- vdde
+  vddi : in BIT;	-- vddi
+  vsse : in BIT;	-- vsse
+  vssi : in BIT	-- vssi
+  );
+end component;
+
+signal s_address: bit_vector(7 downto 0);
+signal s_data: bit_vector(7 downto 0);
+signal s_wordin: bit_vector(7 downto 0);
+signal s_scanin: bit;
+signal s_scanout: bit;
+signal s_scantest: bit;
+signal s_error: bit;
+signal s_reset: bit;
+signal s_clk_core: bit;
+signal s_ring_vsse: bit;
+signal s_ring_vssi: bit;
+signal s_ring_vdde: bit;
+signal s_ring_vddi: bit;
+signal s_ring_clk: bit;
+
+begin
+
+pad_word_in_0 : pi_sp port map (
+pad => wordin(0),
+t => s_wordin(0),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_1 : pi_sp port map (
+pad => wordin(1),
+t => s_wordin(1),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_2 : pi_sp port map (
+pad => wordin(2),
+t => s_wordin(2),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_3 : pi_sp port map (
+pad => wordin(3),
+t => s_wordin(3),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_4 : pi_sp port map (
+pad => wordin(4),
+t => s_wordin(4),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_5 : pi_sp port map (
+pad => wordin(5),
+t => s_wordin(5),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_6 : pi_sp port map (
+pad => wordin(6),
+t => s_wordin(6),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_word_in_7 : pi_sp port map (
+pad => wordin(7),
+t => s_wordin(7),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+
+pad_scanin : pi_sp port map (
+pad => scanin,
+t => s_scanin,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_scantest : pi_sp port map (
+pad => scantest,
+t => s_scantest,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+
+pad_reset : pi_sp port map (
+pad => reset,
+t => s_reset,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_0 : po_sp port map (
+i => s_address(0),
+pad => address(0),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_1 : po_sp port map (
+i => s_address(1),
+pad => address(1),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_2 : po_sp port map (
+i => s_address(2),
+pad => address(2),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_3 : po_sp port map (
+i => s_address(3),
+pad => address(3),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_4 : po_sp port map (
+i => s_address(4),
+pad => address(4),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_5 : po_sp port map (
+i => s_address(5),
+pad => address(5),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_6 : po_sp port map (
+i => s_address(6),
+pad => address(6),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_address_7 : po_sp port map (
+i => s_address(7),
+pad => address(7),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_0 : po_sp port map (
+i => s_data(0),
+pad => data(0),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_1 : po_sp port map (
+i => s_data(1),
+pad => data(1),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_2 : po_sp port map (
+i => s_data(2),
+pad => data(2),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_3 : po_sp port map (
+i => s_data(3),
+pad => data(3),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_4 : po_sp port map (
+i => s_data(4),
+pad => data(4),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_5 : po_sp port map (
+i => s_data(5),
+pad => data(5),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_6 : po_sp port map (
+i => s_data(6),
+pad => data(6),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_data_7 : po_sp port map (
+i => s_data(7),
+pad => data(7),
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_scanout : po_sp port map (
+i => s_scanout,
+pad => scanout,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_error : po_sp port map (
+i => s_error,
+pad => err,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_vsse : pvsse_sp port map (
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_vdde : pvdde_sp port map (
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_vddi : pvddi_sp port map (
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_vssick : pvssick_sp port map (
+cko => s_clk_core,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+pad_clk : pck_sp port map (
+pad => clk,
+clk => s_ring_clk,
+vdde => s_ring_vdde,
+vddi => s_ring_vddi,
+vsse => s_ring_vsse,
+vssi => s_ring_vssi
+);
+
+
+end structural;
+
+
+

@@ -1,0 +1,206 @@
+-- VHDL data flow description generated from `frame_decoder_o`
+--		date : Sun May 14 08:01:23 2017
+
+
+-- Entity Declaration
+
+ENTITY frame_decoder_o IS
+  PORT (
+  vdd : in BIT;	-- vdd
+  vss : in BIT;	-- vss
+  clk : in BIT;	-- clk
+  reset : in BIT;	-- reset
+  err : out BIT;	-- err
+  word_in : in bit_vector(7 DOWNTO 0) ;	-- word_in
+  address : out bit_vector(7 DOWNTO 0) ;	-- address
+  data : out bit_vector(7 DOWNTO 0) 	-- data
+  );
+END frame_decoder_o;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE VBE OF frame_decoder_o IS
+  SIGNAL frame_decoder_cs : REG_VECTOR(8 DOWNTO 0) REGISTER;	-- frame_decoder_cs
+  SIGNAL frame_decoder_cs_s9 : BIT;		-- frame_decoder_cs_s9
+  SIGNAL frame_decoder_ns_s9 : BIT;		-- frame_decoder_ns_s9
+  SIGNAL frame_decoder_cs_s8 : BIT;		-- frame_decoder_cs_s8
+  SIGNAL frame_decoder_ns_s8 : BIT;		-- frame_decoder_ns_s8
+  SIGNAL frame_decoder_cs_s7 : BIT;		-- frame_decoder_cs_s7
+  SIGNAL frame_decoder_ns_s7 : BIT;		-- frame_decoder_ns_s7
+  SIGNAL frame_decoder_cs_s6 : BIT;		-- frame_decoder_cs_s6
+  SIGNAL frame_decoder_ns_s6 : BIT;		-- frame_decoder_ns_s6
+  SIGNAL frame_decoder_cs_s5 : BIT;		-- frame_decoder_cs_s5
+  SIGNAL frame_decoder_ns_s5 : BIT;		-- frame_decoder_ns_s5
+  SIGNAL frame_decoder_cs_s4 : BIT;		-- frame_decoder_cs_s4
+  SIGNAL frame_decoder_ns_s4 : BIT;		-- frame_decoder_ns_s4
+  SIGNAL frame_decoder_cs_s3 : BIT;		-- frame_decoder_cs_s3
+  SIGNAL frame_decoder_ns_s3 : BIT;		-- frame_decoder_ns_s3
+  SIGNAL frame_decoder_cs_s2 : BIT;		-- frame_decoder_cs_s2
+  SIGNAL frame_decoder_ns_s2 : BIT;		-- frame_decoder_ns_s2
+  SIGNAL frame_decoder_cs_s1 : BIT;		-- frame_decoder_cs_s1
+  SIGNAL frame_decoder_ns_s1 : BIT;		-- frame_decoder_ns_s1
+  SIGNAL frame_decoder_ns : BIT_VECTOR(8 DOWNTO 0);	-- frame_decoder_ns
+
+BEGIN
+  frame_decoder_ns(0) <= frame_decoder_ns_s9;
+  frame_decoder_ns(1) <= frame_decoder_ns_s8;
+  frame_decoder_ns(2) <= frame_decoder_ns_s7;
+  frame_decoder_ns(3) <= frame_decoder_ns_s6;
+  frame_decoder_ns(4) <= frame_decoder_ns_s5;
+  frame_decoder_ns(5) <= frame_decoder_ns_s4;
+  frame_decoder_ns(6) <= frame_decoder_ns_s3;
+  frame_decoder_ns(7) <= frame_decoder_ns_s2;
+  frame_decoder_ns(8) <= frame_decoder_ns_s1;
+  frame_decoder_ns_s1 <= ((frame_decoder_cs_s1 AND (word_in(0) OR NOT(
+word_in(1)) OR NOT(word_in(2)) OR NOT(word_in(3)) OR NOT(
+word_in(4)) OR NOT(word_in(5)) OR NOT(word_in(6)) OR 
+word_in(7))) OR (frame_decoder_cs_s2 AND (word_in(1) OR 
+word_in(2) OR word_in(3) OR word_in(4) OR word_in(5) OR 
+word_in(6) OR NOT(word_in(7)))) OR frame_decoder_cs_s7 OR 
+frame_decoder_cs_s9);
+  frame_decoder_cs_s1 <= frame_decoder_cs(8);
+  frame_decoder_ns_s2 <= (frame_decoder_cs_s1 AND NOT(word_in(0)) AND 
+word_in(1) AND word_in(2) AND word_in(3) AND word_in(4) AND
+ word_in(5) AND word_in(6) AND NOT(word_in(7)));
+  frame_decoder_cs_s2 <= frame_decoder_cs(7);
+  frame_decoder_ns_s3 <= (frame_decoder_cs_s2 AND NOT(word_in(0)) AND NOT(
+word_in(1)) AND NOT(word_in(2)) AND NOT(word_in(3)) AND NOT
+(word_in(4)) AND NOT(word_in(5)) AND NOT(
+word_in(6)) AND word_in(7));
+  frame_decoder_cs_s3 <= frame_decoder_cs(6);
+  frame_decoder_ns_s4 <= (frame_decoder_cs_s2 AND word_in(0) AND NOT(
+word_in(1)) AND NOT(word_in(2)) AND NOT(word_in(3)) AND NOT
+(word_in(4)) AND NOT(word_in(5)) AND NOT(
+word_in(6)) AND word_in(7));
+  frame_decoder_cs_s4 <= frame_decoder_cs(5);
+  frame_decoder_ns_s5 <= frame_decoder_cs_s3;
+  frame_decoder_cs_s5 <= frame_decoder_cs(4);
+  frame_decoder_ns_s6 <= frame_decoder_cs_s4;
+  frame_decoder_cs_s6 <= frame_decoder_cs(3);
+  frame_decoder_ns_s7 <= frame_decoder_cs_s5;
+  frame_decoder_cs_s7 <= frame_decoder_cs(2);
+  frame_decoder_ns_s8 <= frame_decoder_cs_s6;
+  frame_decoder_cs_s8 <= frame_decoder_cs(1);
+  frame_decoder_ns_s9 <= frame_decoder_cs_s8;
+  frame_decoder_cs_s9 <= frame_decoder_cs(0);
+  label0 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(0) <= GUARDED (frame_decoder_ns(0) AND NOT(reset));
+  END BLOCK label0;
+  label1 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(1) <= GUARDED (frame_decoder_ns(1) AND NOT(reset));
+  END BLOCK label1;
+  label2 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(2) <= GUARDED (frame_decoder_ns(2) AND NOT(reset));
+  END BLOCK label2;
+  label3 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(3) <= GUARDED (frame_decoder_ns(3) AND NOT(reset));
+  END BLOCK label3;
+  label4 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(4) <= GUARDED (frame_decoder_ns(4) AND NOT(reset));
+  END BLOCK label4;
+  label5 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(5) <= GUARDED (frame_decoder_ns(5) AND NOT(reset));
+  END BLOCK label5;
+  label6 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(6) <= GUARDED (frame_decoder_ns(6) AND NOT(reset));
+  END BLOCK label6;
+  label7 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(7) <= GUARDED (frame_decoder_ns(7) AND NOT(reset));
+  END BLOCK label7;
+  label8 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs(8) <= GUARDED (frame_decoder_ns(8) OR reset);
+  END BLOCK label8;
+
+data(0) <= ((frame_decoder_cs_s5 AND word_in(0) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(0) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(0) 
+AND NOT(reset)));
+
+data(1) <= ((frame_decoder_cs_s5 AND word_in(1) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(1) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(1) 
+AND NOT(reset)));
+
+data(2) <= ((frame_decoder_cs_s5 AND word_in(2) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(2) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(2) 
+AND NOT(reset)));
+
+data(3) <= ((frame_decoder_cs_s5 AND word_in(3) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(3) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(3) 
+AND NOT(reset)));
+
+data(4) <= ((frame_decoder_cs_s5 AND word_in(4) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(4) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(4) 
+AND NOT(reset)));
+
+data(5) <= ((frame_decoder_cs_s5 AND word_in(5) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(5) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(5) 
+AND NOT(reset)));
+
+data(6) <= ((frame_decoder_cs_s5 AND word_in(6) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(6) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(6) 
+AND NOT(reset)));
+
+data(7) <= ((frame_decoder_cs_s5 AND word_in(7) AND NOT(
+reset)) OR (frame_decoder_cs_s6 AND word_in(7) AND NOT
+(reset)) OR (frame_decoder_cs_s8 AND word_in(7) 
+AND NOT(reset)));
+
+address(0) <= ((frame_decoder_cs_s3 AND word_in(0) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(0) AND NOT
+(reset)));
+
+address(1) <= ((frame_decoder_cs_s3 AND word_in(1) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(1) AND NOT
+(reset)));
+
+address(2) <= ((frame_decoder_cs_s3 AND word_in(2) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(2) AND NOT
+(reset)));
+
+address(3) <= ((frame_decoder_cs_s3 AND word_in(3) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(3) AND NOT
+(reset)));
+
+address(4) <= ((frame_decoder_cs_s3 AND word_in(4) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(4) AND NOT
+(reset)));
+
+address(5) <= ((frame_decoder_cs_s3 AND word_in(5) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(5) AND NOT
+(reset)));
+
+address(6) <= ((frame_decoder_cs_s3 AND word_in(6) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(6) AND NOT
+(reset)));
+
+address(7) <= ((frame_decoder_cs_s3 AND word_in(7) AND NOT(
+reset)) OR (frame_decoder_cs_s4 AND word_in(7) AND NOT
+(reset)));
+
+err <= ((frame_decoder_cs_s2 AND (word_in(1) OR 
+word_in(2) OR word_in(3) OR word_in(4) OR word_in(5) OR 
+word_in(6) OR NOT(word_in(7))) AND NOT(reset)) OR (
+frame_decoder_cs_s7 AND (NOT(word_in(0)) OR NOT(word_in(1)) OR NOT(
+word_in(2)) OR word_in(3) OR word_in(4) OR NOT(word_in(5)) 
+OR NOT(word_in(6)) OR NOT(word_in(7))) AND NOT(
+reset)) OR (frame_decoder_cs_s9 AND (NOT(word_in(0)) 
+OR NOT(word_in(1)) OR NOT(word_in(2)) OR word_in(3)
+ OR word_in(4) OR NOT(word_in(5)) OR NOT(
+word_in(6)) OR NOT(word_in(7))) AND NOT(reset)));
+END;

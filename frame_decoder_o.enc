@@ -1,0 +1,11 @@
+# Encoding figure "frame_decoder"
+-frame_decoder o 9
+s9	0	1
+s8	1	2
+s7	2	4
+s6	3	8
+s5	4	10
+s4	5	20
+s3	6	40
+s2	7	80
+s1	8	100

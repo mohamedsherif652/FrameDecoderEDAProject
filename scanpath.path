@@ -1,0 +1,12 @@
+BEGIN_PATH_REG
+frame_decoder_cs_0_ins
+frame_decoder_cs_1_ins
+frame_decoder_cs_2_ins
+frame_decoder_cs_3_ins
+END_PATH_REG
+
+BEGIN_CONNECTOR
+SCAN_IN scanin
+SCAN_OUT scanout
+SCAN_TEST scantest
+END_CONNECTOR

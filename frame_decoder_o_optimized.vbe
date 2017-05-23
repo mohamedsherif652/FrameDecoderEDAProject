@@ -1,0 +1,142 @@
+-- VHDL data flow description generated from `frame_decoder_o_optimized`
+--		date : Sun May 14 08:01:23 2017
+
+
+-- Entity Declaration
+
+ENTITY frame_decoder_o_optimized IS
+  PORT (
+  vdd : in BIT;	-- vdd
+  vss : in BIT;	-- vss
+  clk : in BIT;	-- clk
+  reset : in BIT;	-- reset
+  err : out BIT;	-- err
+  word_in : in bit_vector(7 DOWNTO 0) ;	-- word_in
+  address : out bit_vector(7 DOWNTO 0) ;	-- address
+  data : out bit_vector(7 DOWNTO 0) 	-- data
+  );
+END frame_decoder_o_optimized;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF frame_decoder_o_optimized IS
+  SIGNAL frame_decoder_cs : REG_VECTOR(8 DOWNTO 0) REGISTER;	-- frame_decoder_cs
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux2 : BIT;		-- aux2
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux7 : BIT;		-- aux7
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux12 : BIT;		-- aux12
+  SIGNAL aux13 : BIT;		-- aux13
+  SIGNAL aux14 : BIT;		-- aux14
+  SIGNAL aux17 : BIT;		-- aux17
+  SIGNAL aux18 : BIT;		-- aux18
+  SIGNAL aux19 : BIT;		-- aux19
+
+BEGIN
+  aux19 <= (aux8 AND NOT(reset));
+  aux18 <= NOT(word_in(2) AND word_in(3));
+  aux17 <= (NOT(word_in(5)) AND (NOT(word_in(2)) AND (NOT(
+word_in(3)) AND frame_decoder_cs(7))));
+  aux14 <= (word_in(2) OR word_in(3));
+  aux13 <= (frame_decoder_cs(0) OR frame_decoder_cs(2));
+  aux12 <= (((NOT(aux9) AND NOT(reset)) AND NOT(word_in(6)))
+ AND NOT(word_in(1)));
+  aux9 <= (NOT(word_in(7)) OR word_in(4));
+  aux8 <= (frame_decoder_cs(6) OR frame_decoder_cs(5));
+  aux7 <= (word_in(7) AND NOT(reset));
+  aux6 <= (NOT(reset) AND word_in(6));
+  aux5 <= (word_in(4) AND NOT(reset));
+  aux4 <= (NOT(reset) AND aux2);
+  aux3 <= (NOT(reset) AND word_in(1));
+  aux2 <= ((frame_decoder_cs(3) OR frame_decoder_cs(4)) OR 
+frame_decoder_cs(1));
+  aux0 <= (NOT(reset) AND word_in(0));
+  label0 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (0) <= GUARDED (NOT(reset) AND frame_decoder_cs(1));
+  END BLOCK label0;
+  label1 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (1) <= GUARDED (NOT(reset) AND frame_decoder_cs(3));
+  END BLOCK label1;
+  label2 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (2) <= GUARDED (NOT(reset) AND frame_decoder_cs(4));
+  END BLOCK label2;
+  label3 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (3) <= GUARDED (NOT(reset) AND frame_decoder_cs(5));
+  END BLOCK label3;
+  label4 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (4) <= GUARDED (NOT(reset) AND frame_decoder_cs(6));
+  END BLOCK label4;
+  label5 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (5) <= GUARDED (aux12 AND word_in(0) AND aux17);
+  END BLOCK label5;
+  label6 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (6) <= GUARDED (aux12 AND NOT(word_in(0)) AND aux17);
+  END BLOCK label6;
+  label7 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (7) <= GUARDED (NOT(word_in(7)) AND frame_decoder_cs(8) AND 
+word_in(4) AND NOT(reset) AND word_in(6) AND word_in(1) AND
+ NOT(word_in(0)) AND word_in(5) AND NOT(aux18));
+  END BLOCK label7;
+  label8 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
+  BEGIN
+    frame_decoder_cs (8) <= GUARDED (((aux9 OR word_in(6) OR word_in(1) OR word_in(5)
+ OR aux14) AND frame_decoder_cs(7)) OR (
+frame_decoder_cs(8) AND aux18) OR (frame_decoder_cs(8) AND (NOT(
+word_in(6)) OR NOT(word_in(1)) OR word_in(0) OR NOT(
+word_in(5)))) OR ((word_in(7) OR NOT(word_in(4))) AND 
+frame_decoder_cs(8)) OR reset OR aux13);
+  END BLOCK label8;
+
+data (0) <= (aux2 AND aux0);
+
+data (1) <= (aux2 AND aux3);
+
+data (2) <= (aux4 AND word_in(2));
+
+data (3) <= (aux4 AND word_in(3));
+
+data (4) <= (aux5 AND aux2);
+
+data (5) <= (aux4 AND word_in(5));
+
+data (6) <= (aux2 AND aux6);
+
+data (7) <= (aux7 AND aux2);
+
+address (0) <= (aux0 AND aux8);
+
+address (1) <= (aux3 AND aux8);
+
+address (2) <= (aux19 AND word_in(2));
+
+address (3) <= (aux19 AND word_in(3));
+
+address (4) <= (aux5 AND aux8);
+
+address (5) <= (aux19 AND word_in(5));
+
+address (6) <= (aux6 AND aux8);
+
+address (7) <= (aux7 AND aux8);
+
+err <= ((((aux9 OR NOT(word_in(6)) OR NOT(word_in(1)) OR
+ NOT(word_in(0)) OR NOT(word_in(5)) OR NOT(
+word_in(2)) OR word_in(3)) AND aux13) OR 
+frame_decoder_cs(7)) AND (aux9 OR frame_decoder_cs(0) OR word_in(6) 
+OR word_in(1) OR word_in(5) OR frame_decoder_cs(2) 
+OR aux14) AND NOT(reset));
+END;

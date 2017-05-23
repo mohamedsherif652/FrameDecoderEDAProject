@@ -1,0 +1,85 @@
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+             Alliance CAD System 5.0 20090901, loon 5.0 [2003/12/07]
+             Copyright (c) 2000-2017,                 ASIM/LIP6/UPMC
+             Author(s):                              François Donnet
+             E-mail        :             alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /usr/lib/alliance/cells/sxlib
+
+Reading parameter file 'paramfile.lax'...
+100% delay optimization
+Reading file 'frame_decoder_j_mapped.vst'...
+Controlling file 'paramfile.lax'...
+Reading lib '/usr/lib/alliance/cells/sxlib'...
+Capacitances on file 'frame_decoder_j_mapped.vst'...
+Delays on file 'frame_decoder_j_mapped.vst'...2137 ps
+Area on file 'frame_decoder_j_mapped.vst'...104500 lamda² (with over-cell routing)
+Details...
+	inv_x2: 13 (9%)
+	na2_x1: 12 (11%)
+	no2_x1: 10 (9%)
+	no3_x1: 9 (10%)
+	na3_x1: 7 (8%)
+	noa22_x1: 4 (5%)
+	na4_x1: 4 (5%)
+	sff1_x4: 4 (17%)
+	no4_x1: 4 (5%)
+	o2_x2: 3 (3%)
+	o3_x2: 2 (2%)
+	on12_x1: 1 (1%)
+	an12_x1: 1 (1%)
+	oa22_x2: 1 (1%)
+	nao2o22_x1: 1 (1%)
+	a3_x2: 1 (1%)
+	nao22_x1: 1 (1%)
+	a2_x2: 1 (1%)
+	Total: 79
+Worst RC on file 'frame_decoder_j_mapped.vst'...416 ps
+Inserting buffers on critical path for file 'frame_decoder_j_looned.vst'...1 buffer inserted -> 2109 ps
+Improving RC on critical path for file 'frame_decoder_j_looned.vst'...2053 ps
+Improving all RC for file 'frame_decoder_j_looned.vst'...
+Worst RC on file 'frame_decoder_j_looned.vst'...416 ps
+Area on file 'frame_decoder_j_looned.vst'...105750 lamda² (with over-cell routing)
+Details...
+	na2_x1: 12 (11%)
+	inv_x2: 12 (8%)
+	no2_x1: 10 (9%)
+	no3_x1: 9 (10%)
+	na3_x1: 7 (8%)
+	noa22_x1: 4 (5%)
+	na4_x1: 4 (5%)
+	sff1_x4: 4 (17%)
+	no4_x1: 4 (5%)
+	o2_x2: 3 (3%)
+	o3_x2: 2 (2%)
+	buf_x2: 1 (0%)
+	on12_x1: 1 (1%)
+	an12_x1: 1 (1%)
+	oa22_x2: 1 (1%)
+	nao2o22_x1: 1 (1%)
+	a3_x2: 1 (1%)
+	inv_x4: 1 (0%)
+	nao22_x1: 1 (1%)
+	a2_x2: 1 (1%)
+	Total: 80
+Critical path (no warranty)...2053 ps from 'frame_decoder_cs 0' to 'data 1'
+Saving file 'frame_decoder_j_looned.vst'...
+Saving critical path in xsch color file 'frame_decoder_j_looned.xsc'...
+End of loon...
+

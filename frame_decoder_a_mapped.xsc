@@ -1,0 +1,194 @@
+N:address 0:-1:1631 ps
+N:address 1:-1:1407 ps
+N:address 2:-1:1588 ps
+N:address 3:-1:1407 ps
+N:address 4:-1:1588 ps
+N:address 5:-1:1631 ps
+N:address 6:-1:1631 ps
+N:address 7:-1:1407 ps
+N:ao22_x2_sig:-1:1666 ps
+N:aux11:-1:284 ps
+N:aux12:-1:883 ps
+N:aux8:-1:1132 ps
+N:aux9:-1:278 ps
+N:clk:-1:0 ps
+N:data 0:-1:1805 ps
+N:data 1:-1:1755 ps
+N:data 2:-1:1644 ps
+N:data 3:-1:1755 ps
+N:data 4:-1:1644 ps
+N:data 5:-1:1805 ps
+N:data 6:-1:1805 ps
+N:data 7:-1:1755 ps
+N:err:-1:1906 ps
+N:frame_decoder_cs_0:-1:532 ps
+N:frame_decoder_cs_1:-1:589 ps
+N:frame_decoder_cs_2:-1:593 ps
+N:frame_decoder_cs_3:-1:545 ps
+N:inv_x2_sig:-1:1225 ps
+N:na2_x1_2_sig:-1:1148 ps
+N:na2_x1_3_sig:-1:371 ps
+N:na2_x1_4_sig:-1:371 ps
+N:na2_x1_sig:-1:1255 ps
+N:na3_x1_2_sig:-1:1414 ps
+N:na3_x1_3_sig:-1:1361 ps
+N:na3_x1_4_sig:-1:822 ps
+N:na3_x1_5_sig:-1:1361 ps
+N:na3_x1_6_sig:-1:999 ps
+N:na3_x1_sig:-1:1686 ps
+N:na4_x1_2_sig:-1:425 ps
+N:na4_x1_3_sig:-1:428 ps
+N:na4_x1_4_sig:-1:408 ps
+N:na4_x1_sig:-1:576 ps
+N:no2_x1_2_sig:-1:766 ps
+N:no2_x1_3_sig:-1:766 ps
+N:no2_x1_sig:-1:770 ps
+N:no3_x1_2_sig:-1:435 ps
+N:no3_x1_sig:-1:418 ps
+N:no4_x1_2_sig:-1:1277 ps
+N:no4_x1_3_sig:-1:1028 ps
+N:no4_x1_4_sig:-1:921 ps
+N:no4_x1_5_sig:-1:492 ps
+N:no4_x1_6_sig:-1:411 ps
+N:no4_x1_sig:-1:1146 ps
+N:noa22_x1_sig:-1:819 ps
+N:not_aux0:-1:766 ps
+N:not_aux1:-1:1109 ps
+N:not_aux10:-1:942 ps
+N:not_aux13:-1:1124 ps
+N:not_aux2:-1:770 ps
+N:not_aux3:-1:1286 ps
+N:not_aux4:-1:762 ps
+N:not_aux5:-1:1111 ps
+N:not_frame_decoder_cs_0:-1:648 ps
+N:not_frame_decoder_cs_1:-1:705 ps
+N:not_frame_decoder_cs_2:-1:770 ps
+N:not_frame_decoder_cs_3:-1:693 ps
+N:not_reset:-1:198 ps
+N:not_word_in_0:-1:116 ps
+N:not_word_in_1:-1:140 ps
+N:not_word_in_2:-1:116 ps
+N:not_word_in_3:-1:140 ps
+N:not_word_in_4:-1:116 ps
+N:not_word_in_5:-1:116 ps
+N:not_word_in_6:-1:138 ps
+N:not_word_in_7:-1:136 ps
+N:o2_x2_sig:-1:1116 ps
+N:oa22_x2_sig:-1:1166 ps
+N:reset:-1:0 ps
+N:word_in 0:-1:0 ps
+N:word_in 1:-1:0 ps
+N:word_in 2:-1:0 ps
+N:word_in 3:-1:0 ps
+N:word_in 4:-1:0 ps
+N:word_in 5:-1:0 ps
+N:word_in 6:-1:0 ps
+N:word_in 7:-1:0 ps
+B:err_ins:32:1578 ps
+B:na3_x1_5_ins:-1:1361 ps
+B:na3_x1_6_ins:-1:999 ps
+B:no4_x1_6_ins:-1:411 ps
+B:na3_x1_3_ins:32:1361 ps
+B:na3_x1_4_ins:-1:822 ps
+B:no3_x1_2_ins:-1:435 ps
+B:no4_x1_5_ins:-1:492 ps
+B:address_7:-1:991 ps
+B:address_6:-1:1288 ps
+B:address_5:-1:1288 ps
+B:address_4:-1:1171 ps
+B:address_3:-1:991 ps
+B:address_2:-1:1171 ps
+B:address_1:-1:991 ps
+B:address_0:-1:1288 ps
+B:data_7:-1:1338 ps
+B:data_6:-1:1463 ps
+B:data_5:-1:1463 ps
+B:data_4:-1:1301 ps
+B:na2_x1_4_ins:-1:371 ps
+B:data_3:-1:1338 ps
+B:data_2:-1:1301 ps
+B:na2_x1_3_ins:-1:371 ps
+B:data_1:-1:1338 ps
+B:data_0:-1:1463 ps
+B:frame_decoder_cs_3:-1:1717 ps
+B:na3_x1_ins:-1:1686 ps
+B:na2_x1_2_ins:-1:1148 ps
+B:no4_x1_4_ins:-1:921 ps
+B:na4_x1_4_ins:-1:408 ps
+B:na4_x1_3_ins:-1:428 ps
+B:na2_x1_ins:-1:1255 ps
+B:no4_x1_3_ins:-1:1028 ps
+B:na4_x1_2_ins:-1:425 ps
+B:na4_x1_ins:-1:576 ps
+B:na3_x1_2_ins:-1:1414 ps
+B:oa22_x2_ins:-1:1166 ps
+B:frame_decoder_cs_2:-1:1680 ps
+B:ao22_x2_ins:-1:1666 ps
+B:inv_x2_ins:-1:1225 ps
+B:frame_decoder_cs_1:-1:1317 ps
+B:no4_x1_2_ins:-1:1277 ps
+B:no2_x1_3_ins:-1:766 ps
+B:no3_x1_ins:-1:418 ps
+B:noa22_x1_ins:-1:819 ps
+B:no2_x1_2_ins:-1:766 ps
+B:frame_decoder_cs_0:-1:1185 ps
+B:no4_x1_ins:-1:1146 ps
+B:aux8_ins:32:1040 ps
+B:no2_x1_ins:32:770 ps
+B:aux9_ins:-1:209 ps
+B:aux11_ins:-1:209 ps
+B:aux12_ins:-1:820 ps
+B:not_word_in_0:-1:116 ps
+B:not_word_in_1:-1:116 ps
+B:not_word_in_2:-1:116 ps
+B:not_word_in_3:-1:116 ps
+B:not_word_in_4:-1:116 ps
+B:not_word_in_5:-1:116 ps
+B:not_word_in_6:-1:116 ps
+B:not_word_in_7:-1:116 ps
+B:not_reset_ins:-1:116 ps
+B:not_frame_decoder_cs_3:-1:661 ps
+B:not_frame_decoder_cs_1:-1:705 ps
+B:not_frame_decoder_cs_2:-1:709 ps
+B:not_aux10_ins:-1:942 ps
+B:not_frame_decoder_cs_0:-1:648 ps
+B:not_aux0_ins:-1:766 ps
+B:not_aux1_ins:-1:1178 ps
+B:not_aux2_ins:-1:770 ps
+B:not_aux3_ins:-1:1577 ps
+B:o2_x2_ins:-1:1116 ps
+B:not_aux13_ins:-1:1124 ps
+B:not_aux4_ins:-1:762 ps
+B:not_aux5_ins:-1:1111 ps
+C:data 0:-1:1805 ps
+C:data 1:-1:1755 ps
+C:data 2:-1:1644 ps
+C:data 3:-1:1755 ps
+C:data 4:-1:1644 ps
+C:data 5:-1:1805 ps
+C:data 6:-1:1805 ps
+C:data 7:-1:1755 ps
+C:address 0:-1:1631 ps
+C:address 1:-1:1407 ps
+C:address 2:-1:1588 ps
+C:address 3:-1:1407 ps
+C:address 4:-1:1588 ps
+C:address 5:-1:1631 ps
+C:address 6:-1:1631 ps
+C:address 7:-1:1407 ps
+C:word_in 0:-1:0 ps
+C:word_in 1:-1:0 ps
+C:word_in 2:-1:0 ps
+C:word_in 3:-1:0 ps
+C:word_in 4:-1:0 ps
+C:word_in 5:-1:0 ps
+C:word_in 6:-1:0 ps
+C:word_in 7:-1:0 ps
+C:err:32:1906 ps
+C:reset:-1:0 ps
+C:clk:-1:0 ps
+P:frame_decoder_cs_2:frame_decoder_cs_2:no2_x1_ins:32:1111 ps
+P:no2_x1_ins:no2_x1_sig:aux8_ins:32:1111 ps
+P:aux8_ins:aux8:na3_x1_3_ins:32:1111 ps
+P:na3_x1_3_ins:na3_x1_3_sig:err_ins:32:1111 ps
+P:err_ins:err:err:32:1111 ps
