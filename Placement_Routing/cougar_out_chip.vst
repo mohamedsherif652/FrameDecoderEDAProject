@@ -1,0 +1,466 @@
+-- VHDL structural description generated from `cougar_out_chip`
+--		date : Sun Jun  4 13:48:34 2017
+
+
+-- Entity Declaration
+
+ENTITY cougar_out_chip IS
+  PORT (
+  word_in : linkage BIT_VECTOR(7 DOWNTO 0) ;	-- word_in
+  scantest : linkage BIT ;	-- scantest
+  scanout : linkage BIT ;	-- scanout
+  scanin : linkage BIT ;	-- scanin
+  reset : linkage BIT ;	-- reset
+  err : linkage BIT ;	-- err
+  data : linkage BIT_VECTOR(7 DOWNTO 0) ;	-- data
+  clk : linkage BIT ;	-- clk
+  address : linkage BIT_VECTOR(7 DOWNTO 0) 	-- address
+  );
+END cougar_out_chip;
+
+-- Architecture Declaration
+
+ARCHITECTURE VST OF cougar_out_chip IS
+  COMPONENT frame_decoder_final_output
+    port (
+    word_in : linkage BIT_VECTOR(7 DOWNTO 0) ;	-- word_in
+    vss : linkage BIT ;	-- vss
+    vdd : linkage BIT ;	-- vdd
+    scantest : linkage BIT ;	-- scantest
+    scanout : linkage BIT ;	-- scanout
+    scanin : linkage BIT ;	-- scanin
+    reset : linkage BIT ;	-- reset
+    err : linkage BIT ;	-- err
+    data : linkage BIT_VECTOR(7 DOWNTO 0) ;	-- data
+    clk : linkage BIT ;	-- clk
+    address : linkage BIT_VECTOR(7 DOWNTO 0) 	-- address
+    );
+  END COMPONENT;
+
+  COMPONENT pvddi_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT pvssick_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    cko : linkage BIT ;	-- cko
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT pvdde_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT pi_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    t : linkage BIT ;	-- t
+    pad : linkage BIT ;	-- pad
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT pvsse_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT pck_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    pad : linkage BIT ;	-- pad
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  COMPONENT po_sp
+    port (
+    vssi : linkage BIT ;	-- vssi
+    vsse : linkage BIT ;	-- vsse
+    vddi : linkage BIT ;	-- vddi
+    vdde : linkage BIT ;	-- vdde
+    pad : linkage BIT ;	-- pad
+    i : linkage BIT ;	-- i
+    ck : linkage BIT 	-- ck
+    );
+  END COMPONENT;
+
+  SIGNAL s_data_6 : BIT;	-- s_data 6
+  SIGNAL s_data_5 : BIT;	-- s_data 5
+  SIGNAL s_data_4 : BIT;	-- s_data 4
+  SIGNAL s_data_3 : BIT;	-- s_data 3
+  SIGNAL s_data_2 : BIT;	-- s_data 2
+  SIGNAL s_data_1 : BIT;	-- s_data 1
+  SIGNAL s_data_0 : BIT;	-- s_data 0
+  SIGNAL s_data_7 : BIT;	-- s_data 7
+  SIGNAL s_address_0 : BIT;	-- s_address 0
+  SIGNAL s_scanin : BIT;	-- s_scanin
+  SIGNAL s_address_1 : BIT;	-- s_address 1
+  SIGNAL s_address_2 : BIT;	-- s_address 2
+  SIGNAL s_wordin_6 : BIT;	-- s_wordin 6
+  SIGNAL s_wordin_7 : BIT;	-- s_wordin 7
+  SIGNAL s_scantest : BIT;	-- s_scantest
+  SIGNAL s_wordin_5 : BIT;	-- s_wordin 5
+  SIGNAL s_wordin_4 : BIT;	-- s_wordin 4
+  SIGNAL s_address_3 : BIT;	-- s_address 3
+  SIGNAL s_wordin_3 : BIT;	-- s_wordin 3
+  SIGNAL s_address_4 : BIT;	-- s_address 4
+  SIGNAL s_wordin_2 : BIT;	-- s_wordin 2
+  SIGNAL s_address_5 : BIT;	-- s_address 5
+  SIGNAL s_address_6 : BIT;	-- s_address 6
+  SIGNAL s_address_7 : BIT;	-- s_address 7
+  SIGNAL s_error : BIT;	-- s_error
+  SIGNAL s_scanout : BIT;	-- s_scanout
+  SIGNAL s_clk_core : BIT;	-- s_clk_core
+  SIGNAL s_reset : BIT;	-- s_reset
+  SIGNAL s_wordin_0 : BIT;	-- s_wordin 0
+  SIGNAL s_wordin_1 : BIT;	-- s_wordin 1
+  SIGNAL coin_v_511_v_618_v_511_v_608 : BIT;	-- coin_-511_-618_-511_-608
+  SIGNAL coin_v_589_v_710_v_589_v_672 : BIT;	-- coin_-589_-710_-589_-672
+  SIGNAL coin_v_673_v_834_v_673_v_716 : BIT;	-- coin_-673_-834_-673_-716
+  SIGNAL coin_v_801_v_962_v_801_v_844 : BIT;	-- coin_-801_-962_-801_-844
+  SIGNAL s_ring_vssi : BIT;	-- s_ring_vssi
+
+BEGIN
+
+  core : frame_decoder_final_output
+    PORT MAP (
+    address => s_address_7& s_address_6& s_address_5& s_address_4& s_address_3& s_address_2& s_address_1& s_address_0,
+    clk => s_clk_core,
+    data => s_data_7& s_data_6& s_data_5& s_data_4& s_data_3& s_data_2& s_data_1& s_data_0,
+    err => s_error,
+    reset => s_reset,
+    scanin => s_scanin,
+    scanout => s_scanout,
+    scantest => s_scantest,
+    vdd => coin_v_589_v_710_v_589_v_672,
+    vss => s_ring_vssi,
+    word_in => s_wordin_7& s_wordin_6& s_wordin_5& s_wordin_4& s_wordin_3& s_wordin_2& s_wordin_1& s_wordin_0);
+  pad_data_6 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_6,
+    pad => data(6),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_5 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_5,
+    pad => data(5),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_4 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_4,
+    pad => data(4),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_vddi : pvddi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_3 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_3,
+    pad => data(3),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_2 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_2,
+    pad => data(2),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_1 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_1,
+    pad => data(1),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_0 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_0,
+    pad => data(0),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_6 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_6,
+    pad => address(6),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_7 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_7,
+    pad => address(7),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_error : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_error,
+    pad => err,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_scanout : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_scanout,
+    pad => scanout,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_vssick : pvssick_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    cko => s_clk_core,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_reset : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => reset,
+    t => s_reset,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_0 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(0),
+    t => s_wordin_0,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_1 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(1),
+    t => s_wordin_1,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_scanin : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => scanin,
+    t => s_scanin,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_scantest : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => scantest,
+    t => s_scantest,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_7 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(7),
+    t => s_wordin_7,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_6 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(6),
+    t => s_wordin_6,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_vdde : pvdde_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_5 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(5),
+    t => s_wordin_5,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_4 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(4),
+    t => s_wordin_4,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_3 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(3),
+    t => s_wordin_3,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_word_in_2 : pi_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => word_in(2),
+    t => s_wordin_2,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_data_7 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_data_7,
+    pad => data(7),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_0 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_0,
+    pad => address(0),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_1 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_1,
+    pad => address(1),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_2 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_2,
+    pad => address(2),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_vsse : pvsse_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_clk : pck_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    pad => clk,
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_3 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_3,
+    pad => address(3),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_4 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_4,
+    pad => address(4),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+  pad_address_5 : po_sp
+    PORT MAP (
+    ck => coin_v_511_v_618_v_511_v_608,
+    i => s_address_5,
+    pad => address(5),
+    vdde => coin_v_673_v_834_v_673_v_716,
+    vddi => coin_v_589_v_710_v_589_v_672,
+    vsse => coin_v_801_v_962_v_801_v_844,
+    vssi => s_ring_vssi);
+
+end VST;

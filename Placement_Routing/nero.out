@@ -1,0 +1,187 @@
+
+                   @@@    @@@           @@@@@@@              
+                    @@     @              @@   @@            
+                    @@@    @              @@    @@           
+                    @ @@   @    @@@@@     @@    @@     @@@   
+                    @ @@   @   @     @    @@   @@    @@   @@ 
+                    @  @@  @  @@     @@   @@@@@     @@     @@
+                    @   @@ @  @@@@@@@@@   @@  @@    @@     @@
+                    @   @@ @  @@          @@   @@   @@     @@
+                    @    @@@  @@      @   @@   @@   @@     @@
+                    @     @@   @@    @@   @@    @@   @@   @@ 
+                   @@@    @@     @@@@   @@@@@   @@@    @@@   
+
+                               Negotiating Router
+
+                   Alliance CAD System 5.0 20090901,  nero 5.0
+                   Copyright (c) 2002-2017,     ASIM/LIP6/UPMC
+                   E-mail        : alliance-users@asim.lip6.fr
+
+                                S/N 20080611.1
+
+
+  o  MBK environment :
+
+     MBK_IN_LO       := vst
+     MBK_OUT_LO      := vst
+     MBK_IN_PH       := ap
+     MBK_OUT_PH      := ap
+     MBK_WORK_LIB    := .
+     MBK_CATA_LIB    := .
+                        /usr/lib64/alliance/cells/sxlib
+                        /usr/lib64/alliance/cells/dp_sxlib
+                        /usr/lib64/alliance/cells/rflib
+                        /usr/lib64/alliance/cells/rf2lib
+                        /usr/lib64/alliance/cells/ramlib
+                        /usr/lib64/alliance/cells/romlib
+                        /usr/lib64/alliance/cells/pxlib
+                        /usr/lib64/alliance/cells/padlib
+     MBK_CATAL_NAME  := CATAL
+     MBK_VDD         := vdd
+     MBK_VSS         := vss
+     MBK_SEPAR       := .
+
+  o  Loading netlist "frame_decoder_final_output"...
+  o  Loading layout "frame_decoder_final_output"...
+  o  Flattening layout...
+  o  Flattening netlist...
+  o  Building netlist dual representation (lofigchain)...
+  o  Binding logical & physical views...
+
+  o  Loading design into grid...
+     o  Using seed cell "a2_x2_ins" (model "a2_x2").
+     o  Grid offset : (0,0) [adjust (0,0)]
+     o  Small design, global routing disabled.
+     o  Allocating grid size [77,71,3].
+     o  Loading external terminals.
+     o  Finding obstacles.
+     o  Loading nets into grid.
+     o  Allocating the net scheduler.
+     o  Reading power grid.
+
+  o  Local routing stage.
+     - [  93] (hp :=     0) "vdd"
+     - [  92] (hp :=     0) "vss"
+     - [  91] (hp :=     9) "no2_x1_2_sig"
+     - [  90] (hp :=     9) "data 0"
+     - [  89] (hp :=     9) "err"
+     - [  88] (hp :=    10) "na2_x1_11_sig"
+     - [  87] (hp :=    10) "address 1"
+     - [  86] (hp :=    10) "inv_x2_sig"
+     - [  85] (hp :=    10) "address 4"
+     - [  84] (hp :=    10) "address 2"
+     - [  83] (hp :=    10) "address 5"
+     - [  82] (hp :=    11) "na2_x1_3_sig"
+     - [  81] (hp :=    11) "data 1"
+     - [  80] (hp :=    11) "na2_x1_2_sig"
+     - [  79] (hp :=    11) "noa22_x1_2_sig"
+     - [  78] (hp :=    11) "na2_x1_sig"
+     - [  77] (hp :=    12) "data 2"
+     - [  76] (hp :=    12) "address 3"
+     - [  75] (hp :=    12) "na2_x1_10_sig"
+     - [  74] (hp :=    12) "o2_x2_sig"
+     - [  73] (hp :=    12) "o3_x2_2_sig"
+     - [  72] (hp :=    12) "address 6"
+     - [  71] (hp :=    13) "data 6"
+     - [  70] (hp :=    13) "na2_x1_5_sig"
+     - [  69] (hp :=    14) "no4_x1_2_sig"
+     - [  68] (hp :=    14) "na3_x1_6_sig"
+     - [  67] (hp :=    15) "on12_x1_sig"
+     - [  66] (hp :=    15) "scanout"
+     - [  65] (hp :=    15) "o3_x2_sig"
+     - [  64] (hp :=    15) "na2_x1_8_sig"
+     - [  63] (hp :=    15) "data 3"
+     - [  62] (hp :=    16) "na4_x1_3_sig"
+     - [  61] (hp :=    16) "data 7"
+     - [  60] (hp :=    16) "na2_x1_9_sig"
+     - [  59] (hp :=    17) "no4_x1_3_sig"
+     - [  58] (hp :=    17) "data 4"
+     - [  57] (hp :=    18) "na2_x1_4_sig"
+     - [  56] (hp :=    18) "na3_x1_3_sig"
+     - [  55] (hp :=    19) "na3_x1_5_sig"
+     - [  54] (hp :=    19) "o2_x2_2_sig"
+     - [  53] (hp :=    19) "na2_x1_6_sig"
+     - [  52] (hp :=    20) "no3_x1_2_sig"
+     - [  51] (hp :=    20) "data 5"
+     - [  50] (hp :=    20) "not_word_in 7"
+     - [  49] (hp :=    20) "not_frame_decoder_cs 3"
+     - [  48] (hp :=    21) "na4_x1_2_sig"
+     - [  47] (hp :=    21) "na3_x1_sig"
+     - [  46] (hp :=    21) "scanin"
+     - [  45] (hp :=    21) "na2_x1_7_sig"
+     - [  44] (hp :=    24) "a3_x2_sig"
+     - [  43] (hp :=    25) "no2_x1_sig"
+     - [  42] (hp :=    25) "a2_x2_sig"
+     - [  41] (hp :=    26) "no4_x1_4_sig"
+     - [  40] (hp :=    28) "no4_x1_sig"
+     - [  39] (hp :=    31) "oa22_x2_sig"
+     - [  38] (hp :=    31) "nao2o22_x1_sig"
+     - [  37] (hp :=    32) "na4_x1_4_sig"
+     - [  36] (hp :=    33) "noa22_x1_sig"
+     - [  35] (hp :=    34) "address 0"
+     - [  34] (hp :=    34) "na3_x1_2_sig"
+     - [  33] (hp :=    36) "na4_x1_sig"
+     - [  32] (hp :=    37) "no3_x1_sig"
+     - [  31] (hp :=    37) "aux6"
+     - [  30] (hp :=    38) "not_aux5"
+     - [  29] (hp :=    40) "na3_x1_4_sig"
+     - [  28] (hp :=    49) "not_aux3"
+     - [  27] (hp :=    53) "address 7"
+     - [  26] (hp :=    54) "not_word_in 2"
+     - [  25] (hp :=    55) "not_word_in 3"
+     - [  24] (hp :=    59) "scantest"
+     - [  23] (hp :=    66) "not_word_in 1"
+     - [  22] (hp :=    66) "not_frame_decoder_cs 0"
+     - [  21] (hp :=    68) "not_word_in 6"
+     - [  20] (hp :=    71) "reset"
+     - [  19] (hp :=    72) "frame_decoder_cs 0"
+     - [  18] (hp :=    72) "not_word_in 5"
+     - [  17] (hp :=    78) "frame_decoder_cs 2"
+     - [  16] (hp :=    79) "not_aux8"
+     - [  15] (hp :=    81) "clk"
+              > AStar unable to find a path.
+              > Re-routing with pri := 256.
+     - [  17] (hp :=    71) "reset"
+     - [  16] (hp :=    72) "frame_decoder_cs 0"
+     - [  15] (hp :=    78) "frame_decoder_cs 2"
+     - [  14] (hp :=    88) "not_word_in 4"
+     - [  13] (hp :=    90) "word_in 6"
+     - [  12] (hp :=    93) "not_frame_decoder_cs 2"
+     - [  11] (hp :=    94) "word_in 0"
+              > AStar unable to find a path.
+              > Re-routing with pri := 256.
+     - [  13] (hp :=    28) "no4_x1_sig"
+     - [  12] (hp :=    71) "reset"
+     - [  11] (hp :=    88) "not_word_in 4"
+     - [  10] (hp :=    95) "word_in 5"
+     - [   9] (hp :=    97) "word_in 4"
+     - [   8] (hp :=    99) "word_in 3"
+     - [   7] (hp :=   102) "word_in 7"
+     - [   6] (hp :=   106) "word_in 1"
+     - [   5] (hp :=   109) "word_in 2"
+     - [   4] (hp :=   109) "frame_decoder_cs 1"
+     - [   3] (hp :=   109) "not_aux4"
+     - [   2] (hp :=   110) "not_reset"
+     - [   1] (hp :=   124) "frame_decoder_cs 3"
+              > AStar unable to find a path.
+              > Re-routing with pri := 256.
+     - [   3] (hp :=    49) "not_aux3"
+     - [   2] (hp :=    72) "not_word_in 5"
+     - [   1] (hp :=    78) "frame_decoder_cs 2"
+              > AStar unable to find a path.
+              > Re-routing with pri := 256.
+     - [   3] (hp :=    54) "not_word_in 2"
+     - [   2] (hp :=    93) "not_frame_decoder_cs 2"
+     - [   1] (hp :=   109) "word_in 2"
+     - [   0] (hp :=   129) "not_frame_decoder_cs 1"
+
+  o  Routing stats :
+     - routing iterations    := 157047
+     - re-routing iterations := 15859
+     - ratio                 := 9.17204%.
+
+  o  Dumping routing grid.
+  o  Saving MBK figure "frame_decoder_final_output".
+  o  Saving layout as "frame_decoder_final_output"...
+
+
